@@ -1,4 +1,9 @@
-export default function Footer() {
+interface FooterProps {
+  name?: string | null;
+  title?: string | null;
+}
+
+export default function Footer({ name, title }: FooterProps) {
   return (
     <footer
       style={{
@@ -17,10 +22,10 @@ export default function Footer() {
             marginBottom: 8,
           }}
         >
-          Thuan Ba Nguyen
+          {name || "Thuan Ba Nguyen"}
         </p>
         <p style={{ fontSize: 14, color: "#7c7ca8", marginBottom: 24 }}>
-          Full Stack Software Engineer
+          {title || "Software Engineer"}
         </p>
         <div
           style={{
@@ -55,8 +60,8 @@ export default function Footer() {
           }}
         ></div>
         <p style={{ fontSize: 13, color: "#7c7ca8" }}>
-          © {new Date().getFullYear()} Thuan Ba Nguyen. Built with Next.js &
-          PostgreSQL.
+          © {new Date().getFullYear()} {name || "Thuan Ba Nguyen"}. Built with
+          Next.js & PostgreSQL.
         </p>
       </div>
     </footer>

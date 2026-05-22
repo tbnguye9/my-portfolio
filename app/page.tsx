@@ -26,7 +26,7 @@ export default async function Home() {
       <Projects projects={projects} />
       <Certificates certificates={certificates} />
       <Courses courses={courses} />
-      <Footer />
+      <Footer name={profile?.name} title={profile?.title} />
     </main>
   );
 }
