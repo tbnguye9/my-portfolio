@@ -1,11 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import Skills from "@/components/sections/Skills";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/sections/Hero";
+import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Certificates from "@/components/sections/Certificates";
 import Courses from "@/components/sections/Courses";
 import Footer from "@/components/Footer";
 import { prisma } from "@/lib/prisma";
+
+export const revalidate = 0;
 
 export default async function Home() {
   const [profile, skills, projects, certificates, courses] = await Promise.all([
